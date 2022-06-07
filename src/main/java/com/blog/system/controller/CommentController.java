@@ -30,7 +30,7 @@ public class CommentController {
 	@Autowired
 	private CommentService commentService;
 
-	@GetMapping("/post/{postId}/comments")
+	@GetMapping("/posts/{postId}/comments")
 	public ResponseEntity<List<CommentDTO>> listCommentsByPostId(@PathVariable("postId") long postId) {
 		List<CommentDTO> commentsDTO = commentService.getCommentsByPostId(postId);
 		return ResponseEntity.ok(commentsDTO);
@@ -42,7 +42,7 @@ public class CommentController {
 		return ResponseEntity.ok(commentDTO);
 	}
 
-	@PostMapping("/post/{postId}/comments")
+	@PostMapping("/posts/{postId}/comments")
 	public ResponseEntity<CommentDTO> saveComment(@PathVariable("postId") long postId,
 			@Valid @RequestBody CommentDTO commentDTO) {
 		commentDTO.setPostId(postId);

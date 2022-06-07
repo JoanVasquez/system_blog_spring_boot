@@ -1,15 +1,18 @@
 package com.blog.system.dto;
 
+import java.util.Set;
+
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.blog.system.entity.Comment;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class PostDTO {
 
 	private Long id;
@@ -24,5 +27,8 @@ public class PostDTO {
 
 	@NotEmpty(message = "The content cannot be empty")
 	private String content;
+	
+//	@Builder.Default
+	private Set<Comment> comments;
 
 }
