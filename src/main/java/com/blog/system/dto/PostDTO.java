@@ -28,7 +28,6 @@ public class PostDTO {
 	@NotEmpty(message = "The content cannot be empty")
 	private String content;
 	
-//	@Builder.Default
 	private Set<Comment> comments;
 
 }
