@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import com.blog.system.dto.PaginatedResult;
 import com.blog.system.dto.PostDTO;
 import com.blog.system.entity.Post;
-import com.blog.system.exceptions.ResourceNotFoundException;
+import com.blog.system.exception.ResourceNotFoundException;
 import com.blog.system.repository.PostRepository;
 
 @Service

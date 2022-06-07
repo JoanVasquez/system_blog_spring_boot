@@ -11,7 +11,7 @@ import com.blog.system.dto.CommentDTO;
 import com.blog.system.dto.PaginatedResult;
 import com.blog.system.entity.Comment;
 import com.blog.system.entity.Post;
-import com.blog.system.exceptions.ResourceNotFoundException;
+import com.blog.system.exception.ResourceNotFoundException;
 import com.blog.system.repository.CommentRepository;
 import com.blog.system.repository.PostRepository;
 
